@@ -16,26 +16,26 @@ import puppeteer from "puppeteer";
 
 export async function setupBrowser() {
   const browser = await puppeteer.launch({
-    headless: true, // Headless mode for deployment
+    headless: true,
     args: [
-      "--no-sandbox", // Avoid permission issues in deployment environments
-      "--disable-setuid-sandbox", // Required for secure environments
-      "--disable-dev-shm-usage", // Reduce shared memory usage
-      "--disable-extensions", // Disable extensions for better performance
-      "--disable-gpu", // Disable GPU for headless environments
-      "--window-size=1920,1080", // Standardize viewport size
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-extensions",
+      "--disable-gpu",
+      "--window-size=1920,1080",
     ],
-    defaultViewport: null, // Allow full-page rendering
+    defaultViewport: null,
   });
 
   const page = await browser.newPage();
 
-  // Set the user agent to mimic a real browser
+  // Set user agent to mimic a real browser
   await page.setUserAgent(
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
   );
 
-  // Disable loading unnecessary resources like images, fonts, and stylesheets
+  // Disable unnecessary resources for performance
   await page.setRequestInterception(true);
   page.on("request", (request) => {
     const resourceType = request.resourceType();
@@ -46,7 +46,7 @@ export async function setupBrowser() {
     }
   });
 
-  // Add error handling to close the browser if something goes wrong
+  // Add error handling for disconnection
   browser.on("disconnected", () => {
     console.warn("Browser instance was disconnected.");
   });
