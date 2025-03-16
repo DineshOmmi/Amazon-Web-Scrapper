@@ -16,15 +16,24 @@ This tool helps users make smarter shopping decisions by staying informed about 
 ## 📸 Screenshots
 
 LoginPage
+
 ![Image](https://github.com/user-attachments/assets/86dcced1-7867-4ec6-b3f1-c971f341a533)
 
-Homepage
+SignUpPage
+
+![Image](https://github.com/user-attachments/assets/9799e9ac-b251-495f-a7de-62979e506e0a)
+
+Email Verification Page
+
+![Image](https://github.com/user-attachments/assets/af7fd990-1525-4b86-accb-573879c535c8)
+
+HomePage
+
+![Image](https://github.com/user-attachments/assets/81a6512d-3281-49b3-9536-28433bfbedc0)
 
 Product Tracking Dashboard
 
-
-
-Email Notification Sample
+![Image](https://github.com/user-attachments/assets/578a56dc-388c-41a0-b060-73b40846b72f)
 
 ---
 
