@@ -15,9 +15,10 @@ This tool helps users make smarter shopping decisions by staying informed about 
 
 ## 📸 Screenshots
 
+LoginPage
+![Image](https://github.com/user-attachments/assets/86dcced1-7867-4ec6-b3f1-c971f341a533)
+
 Homepage
-
-
 
 Product Tracking Dashboard
 
